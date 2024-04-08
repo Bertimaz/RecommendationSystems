@@ -22,8 +22,6 @@ produtos_recomendados_similaridade=db.get_products_from_similar_cliente(client_i
 produtos_populares=db.get_two_most_popular_products()
 produtos_cliente=db.get_products_from_client(client_id)
 produtos_recomendados=produtos_recomendados_similaridade+produtos_populares
-print('aaa',produtos_recomendados)
-print('produtoscliente', produtos_cliente)
 produtos_recomendados=[produto for produto in produtos_recomendados if produto not in produtos_cliente]
 
 
