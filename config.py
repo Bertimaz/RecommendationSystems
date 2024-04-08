@@ -1,7 +1,20 @@
 import streamlit as st
-databaseSuperUser=st.secrets['databaseSuperUser']
 
-database=st.secrets['database']
+
+databaseSuperUser={'Server':st.secrets['databaseSuperUser_server'],
+                    'port':st.secrets['databaseport'],
+                    'Username':st.secrets['databaseuser'],
+                    'password':st.secrets['database_password'],
+                    'db':st.secrets['db_name']
+                    }
+
+database=st.secrets['db_name']
 
 connection_string=st.secrets['connection_string']
-# connection_string=r'postgres://postgres:30794009@localhost:5432/recommendationSystems'
+
+
+
+
+
+
+
